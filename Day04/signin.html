@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <title>Sign In</title>
+</head>
+
+<body>
+    <div class="container signin signing">
+        <header>
+            <div class="logo">
+                <img src="./src/img/index/logo.png" alt="">
+            </div>
+        </header>
+        <main>
+            <p class="welcome">
+                Welcome back
+            </p>
+            <h2>
+                Login to your account
+            </h2>
+            <form action="" id="signin-form">
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" name="email" id="email" class="form-control" rules="required|email" placeholder="John.snow@gmail.com">
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" rules="required|min:6" placeholder="*********">
+                    <span class="error-message"></span>
+                </div>
+                <button class="login">Login now</button>
+                <button class="google-signin">
+                    <img src="./src/img/index/google-logo.png" alt="">
+                    Or sign-in with google
+                </button>
+            </form>
+            <a href="#">Forgot password?</a>
+            <p class="join-free">
+                Dont have an account? <a href="#">Join free today</a>
+            </p>
+        </main>
+    </div>
+    <script src="./src/js/validator.js"></script>
+    <script>
+        var form = new Validator('#signin-form');
+        form.onSubmit = function(data) {
+            console.log(data);
+        }
+    </script>
+</body>
+
+</html>
