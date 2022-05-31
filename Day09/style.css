@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 450px;
+    min-height: 70vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-1,
+#form-3 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#form-2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#form-2 .form-group {
+    width: 60%;
+}
+
+#form-2 .form-group .form-control {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 11px;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.2s ease-in;
+}
+
+.form-group label {
+    color: #4A5568;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.form-group .error-message {
+    position: absolute;
+    color: red;
+    right: 12px;
+    top: 16px;
+}
+
+.form-group .form-control {
+    padding: 16px 20px;
+    border: 1px solid #37A9CD;
+    border-radius: 5px;
+    outline: none;
+}
+
+#form-1 #btn-1,
+#form-3 #btn-3,
+#form-2 #btn-2 {
+    color: #FFFFFF;
+    padding: 16px 0;
+    width: 100%;
+    background-color: #37A9CD;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+#form-2 #btn-2 {
+    padding: 12px 32px;
+    margin: 0;
+    width: fit-content;
+    font-size: 20px;
+    height: fit-content;
+    margin-left: 20px;
+}
+
+#form-2 .form-group .error-message {
+    right: 4px;
+    top: -20px;
+}
+
+.product {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    padding: 40px 0;
+    border-bottom: 1px solid #C4C4C4;
+    width: 100%;
+}
+
+.product #product-name {
+    color: #37A9CD;
+    font-size: 48px;
+}
+
+.product p {
+    color: #FF0000;
+    margin: 30px 0;
+}
+
+.show-product {
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.show-product p {
+    font-size: 32px;
+    margin-top: 28px;
+}

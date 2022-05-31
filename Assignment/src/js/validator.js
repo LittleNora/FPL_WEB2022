@@ -29,6 +29,11 @@ function Validator(formSelector) {
                 return value.length >= max ? undefined : `Vui lòng nhập tối đa ${max} ký tự`;
             }
         },
+        confirm: function(selector) {
+            return function(value) {
+                return value === document.body.querySelector(selector).value ? undefined : 'Mật khẩu nhập lại không hợp lệ';
+            }
+        }
     }
     var formElement = document.querySelector(formSelector);
     if (formElement) {
@@ -69,7 +74,15 @@ function Validator(formSelector) {
             var errorMessage;
 
             for (let rule of rules) {
-                errorMessage = rule(event.target.value);
+                switch (event.target.type) {
+                    case 'checkbox':
+                    case 'radio':
+                        errorMessage = rule(event.target.checked);
+                        break;
+                    default:
+                        errorMessage = rule(event.target.value);
+                        break;
+                }
                 if (errorMessage) break;
             }
 
@@ -99,7 +112,7 @@ function Validator(formSelector) {
                 formGroup.classList.remove('invalid');
                 var formMessage = formGroup.querySelector('.error-message');
                 if (formMessage) {
-                    setTimeout(function () {
+                    setTimeout(() => {
                         formMessage.innerHTML = '';
                     }, 500);
                 }
@@ -110,7 +123,7 @@ function Validator(formSelector) {
 
 
     // Xử lý hành vi submit form
-    formElement.onsubmit = function(event) {
+    formElement.onsubmit = (event) => {
         event.preventDefault();
 
         var inputs = formElement.querySelectorAll('[name][rules]');
@@ -124,7 +137,7 @@ function Validator(formSelector) {
 
         // Khi không có lỗi thì submit form
         if (isValid) {
-            if (typeof _this.onSubmit === 'function') {
+            if (typeof this.onSubmit === 'function') {
                 var enableInputs = formElement.querySelectorAll('[name]:not([disable])');
                 var formValues = Array.from(enableInputs).reduce(function(values, input) {
 
@@ -156,7 +169,7 @@ function Validator(formSelector) {
 
                     return values;
                 }, {})
-                _this.onSubmit(formValues)
+                this.onSubmit(formValues)
             } else {
                 formElement.submit();
             }
