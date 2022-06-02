@@ -59,8 +59,10 @@ if (formAddUser) {
     function addUser(value) {
         userList.push(value);
     }
+
     let inputAddUser = formAddUser.querySelector('input');
     let errorMessAddUser = formAddUser.querySelector('.form-message');
+
     formAddUser.onsubmit = (e) => {
         e.preventDefault();
         if (inputAddUser.value === '') {
@@ -93,21 +95,17 @@ function removeUser() {
 
     // nếu tìm thấy tên tài khoản cần xóa thì
     if (userList.includes(userRemove)) {
-        for (let index in userList) {
-            if (userList[index] === userRemove) {
+        let indexRemove = userList.indexOf(userRemove);
 
-                // thực hiện việc xóa tên  tài khoản đó khỏi mảng
-                userList.splice(index, 1);
+        // thực hiện việc xóa tên  tài khoản đó khỏi mảng
+        userList.splice(indexRemove, 1);
 
-                // gọi ra hàm showMessage để hiển thị thông báo "Xoá thành công"
-                showMessage('Xóa thành công');
+        // gọi ra hàm showMessage để hiển thị thông báo "Xoá thành công"
+        showMessage('Xóa thành công');
 
-                // hiển thị lại dữ liệu trong mảng sau khi đã xóa sản phẩm thành công
-                showUser();
+        // hiển thị lại dữ liệu trong mảng sau khi đã xóa sản phẩm thành công
+        showUser();
 
-                break;
-            }
-        }
     } else {
 
         // nếu không tìm thấy thì gọi hàm showMessage để hiển thị thông báo "không tìm thấy sản phẩm cần xóa"
@@ -125,21 +123,17 @@ function updateUser() {
     // nếu tìm thấy thì 
     if (userList.includes(userUpdate)) {
         let userUpdateContent = prompt('Nhập vào nội dung muốn cập nhật');
-        for (let index in userList) {
-            if (userList[index] === userUpdate) {
+        let indexUpdate = userList.indexOf(userUpdate);
 
-                // thực hiện cập nhật giá trị tên sản phẩm đó
-                userList.splice(index, 1, userUpdateContent);
+        // thực hiện cập nhật giá trị tên sản phẩm đó
+        userList.splice(indexUpdate, 1, userUpdateContent);
 
-                // Sau khi cập nhật xong gọi ra hàm showMessage để hiển thị thông báo "Cập nhật thành công"
-                showMessage('Cập nhật thành công');
+        // Sau khi cập nhật xong gọi ra hàm showMessage để hiển thị thông báo "Cập nhật thành công"
+        showMessage('Cập nhật thành công');
 
-                // hiển thị lại dữ liệu trong mảng sau khi đã cập nhật thành công
-                showUser();
+        // hiển thị lại dữ liệu trong mảng sau khi đã cập nhật thành công
+        showUser();
 
-                break;
-            }
-        }
     } else {
 
         // nếu không tìm thấy thì  gọi hàm showMessage để thông báo "không tìm thấy  khoản cần cập nhật"
