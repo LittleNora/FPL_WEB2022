@@ -21,16 +21,16 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/product.html">Products</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
             <div class="authenticate">
                 <img src="./src/img/index/cart.png" alt="">
-                <button class="button" id="signin-btn">Sign In</button>
-                <button class="button" id="signup-btn">Sign Up</button>
+                <a href="./signin.html" class="button" id="signin-btn">Sign In</a>
+                <a href="./signup.html" class="button" id="signup-btn">Sign Up</a>
             </div>
         </header>
         <main>
@@ -61,136 +61,22 @@
                         Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim
                     </p>
                 </div>
-                <div class="products">
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product1.png" alt="">
-                            <span>Big and Juicy Wagyu Beef Cheeseburger</span>
-                        </a>
-                        <div class="product-info">
-                            <div class="product-info-item">
-                                <img src="./src/img/index/timer.png" alt="">
-                                <span>30 Minutes</span>
-                            </div>
-                            <div class="product-info-item">
-                                <img src="./src/img/index/forkknife.png" alt="">
-                                <span>Snack</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product2.png" alt="">
-                            <span>Fresh Lime Roasted Salmon</span>
-                        </a>
-                        <div class="product-info">
-                            <div class="product-info-item">
-                                <img src="./src/img/index/timer.png" alt="">
-                                <span>30 Minutes</span>
-                            </div>
-                            <div class="product-info-item">
-                                <img src="./src/img/index/forkknife.png" alt="">
-                                <span>Fish</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product3.png" alt="">
-                            <span>The Best Easy One Pot Chicken and Rice</span>
-                        </a>
-                        <div class="product-info">
-                            <div class="product-info-item">
-                                <img src="./src/img/index/timer.png" alt="">
-                                <span>30 Minutes</span>
-                            </div>
-                            <div class="product-info-item">
-                                <img src="./src/img/index/forkknife.png" alt="">
-                                <span>Snack</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product4.png" alt="">
-                            <span>Fresh and Healthy Mixed Mayonnaise </span>
-                        </a>
-                        <div class="product-info">
-                            <div class="product-info-item">
-                                <img src="./src/img/index/timer.png" alt="">
-                                <span>30 Minutes</span>
-                            </div>
-                            <div class="product-info-item">
-                                <img src="./src/img/index/forkknife.png" alt="">
-                                <span>Healthy</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product5.png" alt="">
-                            <span>The Creamiest Creamy Chicken</span>
-                        </a>
-                        <div class="product-info">
-                            <div class="product-info-item">
-                                <img src="./src/img/index/timer.png" alt="">
-                                <span>30 Minutes</span>
-                            </div>
-                            <div class="product-info-item">
-                                <img src="./src/img/index/forkknife.png" alt="">
-                                <span>Noodles</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product6.png" alt="">
-                            <span>Fruity Pancake with Orange & Blueberry</span>
-                        </a>
-                        <div class="product-info">
-                            <div class="product-info-item">
-                                <img src="./src/img/index/timer.png" alt="">
-                                <span>30 Minutes</span>
-                            </div>
-                            <div class="product-info-item">
-                                <img src="./src/img/index/forkknife.png" alt="">
-                                <span>Sweet</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="filter">
+                    <select name="filter-selected" id="filter-selected">
+                        <option value="" hidden>Choose Price</option>
+                        <option value="all">All</option>
+                        <option value="under30">Under 30$</option>
+                        <option value="over30">Over 30$</option>
+                    </select>
                 </div>
+                <div class="products"></div>
             </div>
             <div class="categories">
                 <div class="heading">
                     <h1 class="box-heading">Categories</h1>
                     <a href="#" class="view-all">View All Categories</a>
                 </div>
-                <div class="categories-bar">
-                    <a href="#" class="categories-item">
-                        <img src="./src/img/index/categories/breakfast.png" alt="">
-                        <span>Breakfast</span>
-                    </a>
-                    <a href="#" class="categories-item">
-                        <img src="./src/img/index/categories/vegan.png" alt="">
-                        <span>Vegan</span>
-                    </a>
-                    <a href="#" class="categories-item">
-                        <img src="./src/img/index/categories/meat.png" alt="">
-                        <span>Meat</span>
-                    </a>
-                    <a href="#" class="categories-item">
-                        <img src="./src/img/index/categories/dessert.png" alt="">
-                        <span>Dessert</span>
-                    </a>
-                    <a href="#" class="categories-item">
-                        <img src="./src/img/index/categories/lunch.png" alt="">
-                        <span>Lunch</span>
-                    </a>
-                    <a href="#" class="categories-item">
-                        <img src="./src/img/index/categories/chocolate.png" alt="">
-                        <span>Chocolate</span>
-                    </a>
-                </div>
+                <div class="categories-bar"></div>
             </div>
             <div class="contact">
                 <h1 class="box-heading">
@@ -201,22 +87,25 @@
                         <div class="form-box">
                             <div class="form-group">
                                 <label for="">NAME</label>
-                                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name...">
+                                <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name..." rules="required">
                                 <span class="error-message">Hello</span>
                             </div>
                             <div class="form-group">
                                 <label for="">EMAIL ADDRESS</label>
-                                <input class="form-control" name="email" id="email" type="text" placeholder="Your email address...">
+                                <input class="form-control" name="email" id="email" type="text" placeholder="Your email address..." rules="required|email">
                                 <span class="error-message"></span>
                             </div>
                             <div class="form-group">
                                 <label for="">SUBJECT</label>
-                                <input class="form-control" name="subject" id="subject" type="text" placeholder="Enter subject...">
+                                <input class="form-control" name="subject" id="subject" type="text" placeholder="Enter subject..." rules="required">
                                 <span class="error-message"></span>
                             </div>
                             <div class="form-group">
                                 <label for="">ENQUIRY TYPE</label>
-                                <select class="form-control" name="enquiry-type" id="enquiry-type">
+                                <select class="form-control" name="enquiry-type" rules="required" id="enquiry-type">
+                                    <option value="" hidden>
+                                        Choose enquiry type
+                                    </option>
                                     <option value="0">
                                         Advertising
                                     </option>
@@ -231,7 +120,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">MESSAGE</label>
-                                <textarea class="form-control" name="message" id="message" placeholder="Enter your messages..."></textarea>
+                                <textarea class="form-control" name="message" id="message" placeholder="Enter your messages..." rules="max:150"></textarea>
                                 <span class="error-message"></span>
                             </div>
                         </div>
@@ -254,6 +143,13 @@
             </div>
         </footer>
     </div>
+    <script src="./src/js/main.js"></script>
+    <script src="./src/js/validator.js"></script>
+    <script>
+        renderProducts(ListProduct);
+        renderCategories('.categories-bar', true);
+        let contactValidate = new Validator('#contact');
+    </script>
 </body>
 
 </html>

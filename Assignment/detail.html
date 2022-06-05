@@ -20,74 +20,25 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/product.html">Products</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
             <div class="authenticate">
                 <img src="./src/img/index/cart.png" alt="">
-                <button class="button" id="signin-btn">Sign In</button>
-                <button class="button" id="signup-btn">Sign Up</button>
+                <a href="./signin.html" class="button" id="signin-btn">Sign In</a>
+                <a href="./signup.html" class="button" id="signup-btn">Sign Up</a>
             </div>
         </header>
         <main>
-            <div class="product-detail">
-                <div class="product-detail-text">
-                    <h1>
-                        Big and Juicy Wagyu Beef Cheeseburger
-                    </h1>
-                    <span>$30</span>
-                    <p>
-                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
-                        placerat eleifend leo.
-                    </p>
-                    <div class="product-detail-add-cart">
-                        <input class="form-control" type="text" name="quantiy" placeholder="Quantity">
-                        <button>Add To Cart</button>
-                    </div>
-                </div>
-                <div class="product-detail-img">
-                    <img src="./src/img/index/products/product1.png" alt="">
-                </div>
-            </div>
+            <div class="product-detail"></div>
             <div class="related-products">
                 <h1>
                     Related Products
                 </h1>
-                <div class="products">
-                    <div class="product-item">
-                        <img src="./src/img/index/products/product4.png" alt="">
-                        <span class="product-name">
-                            Fresh and Healthy Mixed Mayonnaise Salad
-                        </span>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <img src="./src/img/index/products/product5.png" alt="">
-                        <span class="product-name">
-                            The Creamiest Creamy Chicken
-                        </span>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <img src="./src/img/index/products/product6.png" alt="">
-                        <span class="product-name">
-                            Fruity Pancake with Orange & Blueberry
-                        </span>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                </div>
+                <div class="products"></div>
             </div>
         </main>
         <footer>
@@ -104,6 +55,12 @@
             </div>
         </footer>
     </div>
+    <script src="./src/js/main.js"></script>
+    <script src="./src/js/validator.js"></script>
+    <script>
+        renderDetailProduct('.product-detail');
+        renderProducts(ListProduct, true, 3);
+    </script>
 </body>
 
 </html>

@@ -20,16 +20,16 @@
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/product.html">Products</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
             <div class="authenticate">
                 <img src="./src/img/index/cart.png" alt="">
-                <button class="button" id="signin-btn">Sign In</button>
-                <button class="button" id="signup-btn">Sign Up</button>
+                <a href="./signin.html" class="button" id="signin-btn">Sign In</a>
+                <a href="./signup.html" class="button" id="signup-btn">Sign Up</a>
             </div>
         </header>
         <main>
@@ -38,89 +38,9 @@
             </div>
             <div class="products-box">
                 <div class="products-menu">
-                    <ul>
-                        <li><a href="#">Breakfast</a></li>
-                        <li><a href="#">Vegan</a></li>
-                        <li><a href="#">Meat</a></li>
-                        <li><a href="#">Dessert</a></li>
-                        <li><a href="#">Lunch</a></li>
-                        <li><a href="#">Chocolate</a></li>
-                    </ul>
+                    <ul></ul>
                 </div>
-                <div class="products">
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product4.png" alt="">
-                            <span class="product-name">
-                                Fresh and Healthy Mixed Mayonnaise Salad
-                            </span>
-                        </a>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product5.png" alt="">
-                            <span class="product-name">
-                                The Creamiest Creamy Chicken
-                            </span>
-                        </a>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product6.png" alt="">
-                            <span class="product-name">
-                                Fruity Pancake with Orange & Blueberry
-                            </span>
-                        </a>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product4.png" alt="">
-                            <span class="product-name">
-                                Fresh and Healthy Mixed Mayonnaise Salad
-                            </span>
-                        </a>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product5.png" alt="">
-                            <span class="product-name">
-                                The Creamiest Creamy Chicken
-                            </span>
-                        </a>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                    <div class="product-item">
-                        <a href="#">
-                            <img src="./src/img/index/products/product6.png" alt="">
-                            <span class="product-name">
-                                Fruity Pancake with Orange & Blueberry
-                            </span>
-                        </a>
-                        <span class="product-price">
-                            $30
-                        </span>
-                        <button>Add To Cart</button>
-                    </div>
-                </div>
+                <div class="products"></div>
             </div>
         </main>
         <footer>
@@ -137,6 +57,12 @@
             </div>
         </footer>
     </div>
+    <script src="./src/js/main.js"></script>
+    <script>
+        renderProducts(ListProduct, true);
+        renderCategories('.products-box .products-menu ul');
+        renderByCategory();
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 function Validator(formSelector) {
-    var _this = this;
 
     function getParent(element, selector) {
         while (element.parentElement) {
@@ -26,7 +25,7 @@ function Validator(formSelector) {
         },
         max: function(max) {
             return function(value) {
-                return value.length >= max ? undefined : `Vui lòng nhập tối đa ${max} ký tự`;
+                return value.length <= max ? undefined : `Vui lòng nhập tối đa ${max} ký tự`;
             }
         },
         confirm: function(selector) {

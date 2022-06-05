@@ -111,6 +111,10 @@
         width: 400px;
         padding: 32px 0;
     }
+    .signing form button,
+    .signing form a {
+        font-size: 16px;
+    }
     .signing form .form-group .form-control:hover {
         border-color: rgba(0, 0, 0, 0.1);
     }
@@ -304,7 +308,8 @@
     .products .product-item button:hover,
     #contact button:hover,
     .product-detail-add-cart button:hover,
-    .signing form button:hover {
+    .signing form button:hover,
+    .signing form a:hover {
         cursor: pointer;
         color: #FFFFFF;
         background-color: #F54748;
@@ -342,7 +347,8 @@
         margin: 12px 0;
     }
     #contact .form-group .form-control:hover,
-    .product-detail-add-cart input:hover {
+    .product-detail-add-cart input:hover,
+    .filter select:hover {
         border-color: #37A9CD;
     }
     #contact textarea.form-control {
