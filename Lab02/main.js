@@ -135,7 +135,7 @@ function updateUser() {
         showUser();
 
     } else {
-
+        
         // nếu không tìm thấy thì  gọi hàm showMessage để thông báo "không tìm thấy  khoản cần cập nhật"
         showMessage('Không tìm thấy tài khoản cần cập nhật');
 
