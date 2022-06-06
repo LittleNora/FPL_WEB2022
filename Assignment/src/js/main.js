@@ -150,7 +150,7 @@ function renderCategories(selector, isShowAll = false) {
         htmls = ListCategory.reduce((acc, category) => {
             return acc += /*html*/
             `
-            <a href="/product.html?category-id=${category.id}" class="categories-item">
+            <a href="./product.html?category-id=${category.id}" class="categories-item">
                 <img src="${category.image}" alt="">
                 <span>${category.name}</span>
             </a>
