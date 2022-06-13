@@ -19,18 +19,25 @@
             <div class="logo">
                 <img src="./src/img/index/logo.png" alt="">
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./product.html">Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="authenticate">
-                <img src="./src/img/index/cart.png" alt="">
-                <a href="./signin.html" class="button" id="signin-btn">Sign In</a>
-                <a href="./signup.html" class="button" id="signup-btn">Sign Up</a>
+            <img class="list-icon" src="./src/img/index/list-icon.png" alt="">
+            <div class="header-item">
+                <div class="header-item-box">
+                    <img src="./src/img/index/close-icon.png" alt="" class="close-icon">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./product.html">Products</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="authenticate">
+                        <a href="./cart.html"><img src="./src/img/index/cart.png" alt=""></a>
+                        <a href="./signin.html" class="button" id="signin-btn">Sign In</a>
+                        <a href="./signup.html" class="button" id="signup-btn">Sign Up</a>
+                    </div>
+                </div>
             </div>
         </header>
         <main>
@@ -46,7 +53,7 @@
                     <div class="form-delivery-box">
                         <form id="form-delivery">
                             <input type="text" placeholder="Enter your delivery location">
-                            <button>Discover</button>
+                            <button type="button">Discover</button>
                         </form>
                     </div>
                 </div>
@@ -146,9 +153,13 @@
     <script src="./src/js/main.js"></script>
     <script src="./src/js/validator.js"></script>
     <script>
-        renderProducts(ListProduct);
+        handleMenu();
+        renderProducts('.products', ListProduct);
         renderCategories('.categories-bar', true);
         let contactValidate = new Validator('#contact');
+        contactValidate.onSubmit = function(type) {
+            alert(`${type} thành công`);
+        }
     </script>
 </body>
 

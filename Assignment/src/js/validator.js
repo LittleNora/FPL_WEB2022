@@ -1,4 +1,14 @@
-function Validator(formSelector) {
+function Validator(formSelector, typeOfForm = '') {
+    function getType() {
+        switch (typeOfForm) {
+            case 'signup':
+                return 'Đăng ký';
+            case 'signin':
+                return 'Đăng nhập';
+            default:
+                return 'Thao tác';
+        }
+    }
 
     function getParent(element, selector) {
         while (element.parentElement) {
@@ -167,8 +177,9 @@ function Validator(formSelector) {
                     }
 
                     return values;
-                }, {})
-                this.onSubmit(formValues)
+                }, {});
+                this.onSubmit(getType());
+                formElement.reset();
             } else {
                 formElement.submit();
             }

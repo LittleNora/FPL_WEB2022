@@ -18,18 +18,25 @@
             <div class="logo">
                 <img src="./src/img/index/logo.png" alt="">
             </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./product.html">Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="authenticate">
-                <img src="./src/img/index/cart.png" alt="">
-                <a href="./signin.html" class="button" id="signin-btn">Sign In</a>
-                <a href="./signup.html" class="button" id="signup-btn">Sign Up</a>
+            <img class="list-icon" src="./src/img/index/list-icon.png" alt="">
+            <div class="header-item">
+                <div class="header-item-box">
+                    <img src="./src/img/index/close-icon.png" alt="" class="close-icon">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./product.html">Products</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="./blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="authenticate">
+                        <a href="./cart.html"><img src="./src/img/index/cart.png" alt=""></a>
+                        <a href="./signin.html" class="button" id="signin-btn">Sign In</a>
+                        <a href="./signup.html" class="button" id="signup-btn">Sign Up</a>
+                    </div>
+                </div>
             </div>
         </header>
         <main>
@@ -58,8 +65,10 @@
     <script src="./src/js/main.js"></script>
     <script src="./src/js/validator.js"></script>
     <script>
+        handleMenu();
         renderDetailProduct('.product-detail');
-        renderProducts(ListProduct, true, 3);
+        renderProducts('.products', ListProduct, true, 3);
+        handleAddCart();
     </script>
 </body>
 

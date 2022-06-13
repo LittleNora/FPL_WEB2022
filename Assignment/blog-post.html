@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>Post</title>
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter&display=swap" rel="stylesheet">
@@ -40,18 +40,11 @@
             </div>
         </header>
         <main>
-            <div class="banner-products">
-                <img src="./src/img/index/banner-products.png" alt="">
-            </div>
-            <div class="products-box">
-                <div class="products-menu">
-                    <ul></ul>
-                </div>
-                <div class="product-box-item">
-                    <div class="products"></div>
-                    <div class="page-number">
-                        <ul></ul>
-                    </div>
+            <div class="post-wrapper">
+                <div class="post"></div>
+                <div class="related-posts">
+                    <h3 class="title">You May Like These Posts</h3>
+                    <div class="related list-view"></div>
                 </div>
             </div>
         </main>
@@ -72,9 +65,12 @@
     <script src="./src/js/main.js"></script>
     <script>
         handleMenu();
-        renderProducts('.products', ListProduct, true);
-        renderCategories('.products-box .products-menu ul');
-        handleAddCart();
+        renderPost('.post');
+        switchViewRelatedPosts('.related');
+        renderBlogPosts('.related', ListBlogPosts, 3);
+        window.onresize = () => {
+            switchViewRelatedPosts('.related');
+        }
     </script>
 </body>
 

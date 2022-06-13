@@ -49,9 +49,9 @@
     </div>
     <script src="./src/js/validator.js"></script>
     <script>
-        var form = new Validator('#signin-form');
-        form.onSubmit = function(data) {
-            console.log(data);
+        var form = new Validator('#signin-form', 'signin');
+        form.onSubmit = function(type) {
+            alert(`${type} thành công`);
         }
     </script>
 </body>
