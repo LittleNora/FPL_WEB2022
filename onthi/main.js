@@ -1,6 +1,6 @@
-const menuBtn = document.querySelector('#menu-btn');
+const listIconBtn = document.querySelector('.list-icon');
 const menu = document.querySelector('header .menu');
-menuBtn.onclick = () => {
+listIconBtn.onclick = () => {
     if (menu.classList.contains('visible')) {
         menu.classList.remove('visible');
     } else {
